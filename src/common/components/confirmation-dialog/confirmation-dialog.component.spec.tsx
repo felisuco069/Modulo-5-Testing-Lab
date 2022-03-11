@@ -25,8 +25,6 @@ describe('ConfirmationDialogComponent', () => {
       </ConfirmationDialogComponent>
     );
 
-    screen.debug();
-
     const dialogElement = screen.getByRole('dialog');
     // Assert
     expect(dialogElement).toBeInTheDocument();
@@ -53,8 +51,6 @@ describe('ConfirmationDialogComponent', () => {
         {props.children}
       </ConfirmationDialogComponent>
     );
-
-    screen.debug();
 
     const closeButtonElement = screen.getByRole('button', {
       name: 'test close button',
@@ -85,8 +81,6 @@ describe('ConfirmationDialogComponent', () => {
         {props.children}
       </ConfirmationDialogComponent>
     );
-
-    screen.debug();
 
     const acceptButtonElement = screen.getByRole('button', {
       name: 'test accept button',
