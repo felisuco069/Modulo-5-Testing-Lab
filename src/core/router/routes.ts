@@ -10,7 +10,7 @@ interface BaseRoutes {
   editEmployee: string;
 }
 
-const baseRoutes: BaseRoutes = {
+export const baseRoutes: BaseRoutes = {
   root: '/',
   login: '/login',
   submoduleList: '/submodule-list',
@@ -27,9 +27,9 @@ interface Routes extends Omit<BaseRoutes, 'editProject' | 'editEmployee'> {
 
 export const routes: Routes = {
   ...baseRoutes,
-  editProject: id =>
+  editProject: (id) =>
     id ? generatePath(baseRoutes.editProject, { id }) : baseRoutes.editProject,
-  editEmployee: id =>
+  editEmployee: (id) =>
     id
       ? generatePath(baseRoutes.editEmployee, { id })
       : baseRoutes.editEmployee,
