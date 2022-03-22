@@ -1,0 +1,14 @@
+name: CI-E2E workflow
+
+on: pull_request
+
+jobs:
+  ci-testing:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout repository
+       uses: actions/checkout@v2
+     - name: Install
+       run: npm install
+     - name: Tests e2e
+       run: npm run test:e2e:ci
