@@ -15,7 +15,6 @@ describe('SpinnerComponent spec', () => {
 
     //Act
     render(<SpinnerComponent />);
-    screen.debug();
     const presentationElement = screen.getByRole('presentation');
 
     //Assert
@@ -34,7 +33,6 @@ describe('SpinnerComponent spec', () => {
 
     //Act
     render(<SpinnerComponent />);
-    screen.debug();
     const presentationElement = screen.queryByRole('presentation');
 
     //Assert
